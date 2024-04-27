@@ -2,6 +2,8 @@
 Links for studying:
 
 https://www.programiz.com/python-programming/for-loop
+https://docs.python.org/3/library/stdtypes.html#string-methods
+https://www.youtube.com/watch?v=8ext9G7xspg - good for learning
 
 
 
