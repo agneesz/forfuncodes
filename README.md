@@ -1,4 +1,12 @@
 
+Links for studying:
+
+https://www.programiz.com/python-programming/for-loop
+
+
+
+
+
 read me file uses markdown syntax to edit any text, formulas or codes
 #welcome to my repository
 ## My skills🕵️
