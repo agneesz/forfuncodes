@@ -98,3 +98,44 @@ public class Main {
 }
 
 ```
+
+```java
+
+
+
+/*
+
+1. Go through the numbers from 2 to (number - 1) 
+
+2. check whether or not it is dividable (number % i == 0)
+
+3. If the 2nd point is true then its a prime number
+
+4. If the 2nd point is false then it is not a prime number
+
+*/
+import java.util.Scanner; 
+import java.util.Random;
+
+
+public class Main {
+    public static void main(String[] args) {
+        boolean isAPrimeNumber = isPrime(6);
+        System.out.println(isAPrimeNumber);
+    }
+    public static boolean isPrime(int number){
+      for(int i = 2; i < number; i++){
+        if(number % i == 0){
+          return false;
+        }
+      } 
+      return true;
+    }
+}
+
+```
+
+
+
+
+
