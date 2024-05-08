@@ -39,7 +39,7 @@ read me file uses markdown syntax to edit any text, formulas or codes
     4. Return index
 5. If we cant find the number that is less than our number
     6. Return total count + 1
-  
+```java  
 import java.util.Scanner; 
 import java.util.Random;
 
@@ -97,4 +97,4 @@ public class Main {
     }
 }
 
-
+```
