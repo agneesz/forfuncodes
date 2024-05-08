@@ -33,4 +33,68 @@ read me file uses markdown syntax to edit any text, formulas or codes
 ```
 
 
+1. Go through the array - for loop
+2. Find a number less than our number - if
+    3. Increment index by 1 
+    4. Return index
+5. If we cant find the number that is less than our number
+    6. Return total count + 1
+  
+import java.util.Scanner; 
+import java.util.Random;
+
+/*
+
+1. Go through the array - for loop
+2. Find a number less than our number - if
+    3. Increment index by 1 
+    4. Return index
+5. If we cant find the number that is less than our number
+    6. Return total count + 1
+
+
+*/
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {8, 7, 5, 3, 2, 1}; // current race results
+        int number = 4; // our result
+        boolean thePlaceIsFound = false;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] < number){
+                i = i + 1;
+                System.out.println("Our place in race: " + i);
+                thePlaceIsFound = true;
+                break;
+            }
+        }
+
+        if(thePlaceIsFound == false){
+            System.out.println("Our place in race: " + arr.length + 1);
+        }
+    }
+}
+SHORTER VERSION OF CODE IS THIS: 
+
+import java.util.Scanner; 
+import java.util.Random;
+
+
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {8, 7, 5, 3, 2, 1}; // current race results
+        int number = 4; // our result
+        int place = getThePlace(arr, number);
+        System.out.println("Our place in race: " + place);
+    }
+
+    public static int getThePlace(int[] arr, int number){
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] < number){
+                return i + 1;
+            }
+        }
+        return arr.length + 1;
+    }
+}
+
 
