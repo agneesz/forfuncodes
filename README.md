@@ -158,8 +158,97 @@ x x x    7 8 9
 ![image](https://github.com/agneesz/forfuncodes/assets/165931569/a1d0c366-d8b5-4c08-a3cc-54fac49ddbf9)
 
 
+and here is two dimensional array:
+
+```java
+data_type[][] array_name = {
+                             {valueR1C1, valueR1C2, ....}, 
+                             {valueR2C1, valueR2C2, ....}
+                           };
+    int[] oneDimensionalArray = {1,2,3};
+    int[][] array = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+    
+
+ for(int i = 0; i < oneDimensionalArray.length; i++){
+            System.out.print(oneDimensionalArray[i]);
+        }
 
 
 
+
+        int[][] array = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        for(int i = 0; i < array.length; i++){
+            //array[0] = {1, 2, 3}
+            //array[0].length = 3
+            int[] row = array[i]; // {1, 2, 3} OR {4, 5, 6} OR, {7, 8, 9}
+            for(int j = 0; j < row.length; j++){
+                System.out.print(row[j]);
+            }
+
+
+            
+        }
+
+```
+```java
+public class Main {
+    public static void main(String[] args) {
+        int[][] array = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        for(int i = 0; i < array.length; i++){ 
+            //array[0] = {1, 2, 3}
+            //array[0].length = 3
+            int[] row = array[i]; // {1, 2, 3} OR {4, 5, 6} OR, {7, 8, 9}
+            for(int j = 0; j < row.length; j++){
+                System.out.print(row[j]); //PROCESSING ROWS HERE
+            }
+            System.out.println();
+
+            
+        }  
+    }
+}
+
+```
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        int[][] array = new int[10][10];
+
+        for (int i = 0; i < array.length; i++) {
+            int[] row = array[i];
+            for (int j = 0; j < row.length; j++) {
+                row[j] = i*j;
+            }
+        }
+
+        for(int i = 0; i < array.length; i++){
+            for(int j = 0; j < array[i].length; j++){
+                if(array[i][j] < 10){
+                    System.out.print(array[i][j] + "  ");
+                }
+                else{
+                    System.out.print(array[i][j] + " ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+```
 
 
