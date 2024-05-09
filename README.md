@@ -135,6 +135,30 @@ public class Main {
 
 ```
 
+Develop an algorithm to check the results for tic-tac-toe game
+
+Easy: Check two dimensional array to see whether or not values horizontally are the same.
+Medium: Check two dimensional array to see whether or not values vertically are the same.
+Hard: Check two dimensional array to see whether or not values diagonally are the same.
+Extra hard: Develop a full turn based tic-tac-toe game
+
+1. Playfield is a matrix 3x3
+x x x    1 2 3
+x x x    4 5 6
+x x x    7 8 9
+
+2. Players play in turns, the game lasts for 9 turns. 
+3. On every turn a player replaces one number with either x or o
+4. After the turn we check whether a horizontal, vertical and diagonal line has three x or three o
+5. If true, a player wins and game ends
+6. If false, the game continues with the turn of the second player.
+7. If after 9 turns the condition in p. 4 is still false, the game ends with a draw.
+
+
+![image](https://github.com/agneesz/forfuncodes/assets/165931569/a1d0c366-d8b5-4c08-a3cc-54fac49ddbf9)
+
+
+
 
 
 
