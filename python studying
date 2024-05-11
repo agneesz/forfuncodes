@@ -1,0 +1,28 @@
+it contains codes, tasks and other comments
+i am here to learn python
+
+https://github.com/jnguyen095/clean-code/blob/master/Clean.Code.A.Handbook.of.Agile.Software.Craftsmanship.pdf - CLEAN CODE BOOK
+https://medium.com/@instailyacademy/master-the-built-in-functions-in-python-that-make-your-code-awesome-c99b02809eab - BUILT IN CODES IN PYTHON
+
+
+
+
+WHILE LOOP
+```python
+counter = 0 
+student_names = ["Alice", "Bob", "Charlie", "David", "Eva"]
+for i in student_names:
+  print("Student name: " + i)
+
+while True:
+  counter = counter +1
+  print(counter)
+  if counter <10:
+    continue
+  else:
+    break
+
+
+
+
+```
