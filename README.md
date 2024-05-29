@@ -523,3 +523,415 @@ public class Main {
     }
 }
 ```
+
+
+
+```java
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> shopsItems = new ArrayList<String>();
+
+        shopsItems.add("Table");
+        shopsItems.add("Cupboard");
+
+        printArrayList(shopsItems);
+    }
+
+    public static void printArrayList(ArrayList<String> items){
+        for (String item : items){
+            System.out.println(item);
+        }
+    }
+}
+
+//Initialize ArrayList
+// Create an element in the arrayList
+// Remove an element
+// Get the elements
+
+```
+
+
+```java
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    //shopsItems here
+    public static void main(String[] args) {
+        var shopsItems = new ArrayList<String>();
+        //Initializes an ArrayList, creates a new object and gives a reference
+        var scanner = new Scanner(System.in);
+        while(true){
+            var item = scanner.nextLine();
+            if(item.equals("exit")){
+                break;
+            }
+            addItem(shopsItems, item);
+        }
+
+
+        printArrayList(shopsItems);
+    }
+
+    public static void printArrayList(ArrayList<String> items){
+        for (String item : items){
+            System.out.println(item);
+        }
+    }
+
+    public static void addItem(ArrayList<String> items, String item){
+        items.add(item);
+        System.out.println(item + " has been added to the store.");
+    }
+}
+
+//Initialize ArrayList
+// Create an element in the arrayList
+// Remove an element
+// Get the elements
+```
+
+
+```java
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    //shopsItems here
+    public static void main(String[] args) {
+        var shopsItems = new ArrayList<String>();
+        //Initializes an ArrayList, creates a new object and gives a reference
+
+        // These 2 lines in a function
+        shopsItems.add("Table");
+        System.out.println("Table has been added to the store");
+        //
+        
+        shopsItems.add("Cupboard");
+        System.out.println("Cupboard has been added to the store");
+
+
+        printArrayList(shopsItems);
+    }
+
+    public static void printArrayList(ArrayList<String> items){
+        for (String item : items){
+            System.out.println(item);
+        }
+    }
+}
+
+//Initialize ArrayList
+// Create an element in the arrayList
+// Remove an element
+// Get the elements
+```
+
+```java
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    //shopsItems here
+    public static void main(String[] args) {
+        var shopsItems = new ArrayList<String>();
+        //Initializes an ArrayList, creates a new object and gives a reference
+        var scanner = new Scanner(System.in);
+        // These 2 lines in a function
+        var item = scanner.nextLine(); //Asks the user for input
+        shopsItems.add(item); // adds the item to the shopsItems arrayList
+        System.out.println(item + " has been added to the store"); // Provide information to the user
+        //
+        
+        shopsItems.add("Cupboard");
+        System.out.println("Cupboard has been added to the store");
+
+
+        printArrayList(shopsItems);
+    }
+
+    public static void printArrayList(ArrayList<String> items){
+        for (String item : items){
+            System.out.println(item);
+        }
+    }
+
+    public static void addItem(ArrayList<String> shopsItems, String item){
+        shopsItems.add(item); // adds the item to the shopsItems arrayList
+        System.out.println(item + " has been added to the store"); // Provide 
+    }
+}
+
+//Initialize ArrayList
+// Create an element in the arrayList
+// Remove an element
+// Get the elements
+```
+
+
+```java
+
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    // shopsItems here
+    public static void main(String[] args) {
+        var shopsItems = new ArrayList<String>();
+        // Initializes an ArrayList, creates a new object and gives a reference
+        var scanner = new Scanner(System.in);
+        // These 2 lines in a function
+        while (true) {
+            System.out.println("Enter the item you want to add to the list or type exit to stop: ");
+            var item = scanner.nextLine(); // Asks the user for input
+
+            if(item.equals("exit")){
+                break;
+            }
+            
+            addItem(shopsItems, item);
+        }
+
+        printArrayList(shopsItems);
+        
+        System.out.println("Enter the item you want to remove from the list:");
+        var itemToRemove = scanner.nextLine(); // Asks the user for input
+        shopsItems.removeIf(item -> item.equals(itemToRemove));
+
+        printArrayList(shopsItems);
+    }
+
+    public static void printArrayList(ArrayList<String> items) {
+        System.out.println("Store has these items:");
+        for (String item : items) {
+            System.out.println(item);
+        }
+    }
+
+    public static void addItem(ArrayList<String> shopsItems, String item) {
+        shopsItems.add(item); // adds the item to the shopsItems arrayList
+        System.out.println(item + " has been added to the store"); // Provide information to the user
+    }
+}
+
+// Initialize ArrayList
+// Create an element in the arrayList
+// Remove an element
+// Get the elements
+
+
+```
+
+
+```java
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    // shopsItems here
+    public static void main(String[] args) {
+        var shopsItems = new ArrayList<String>();
+        // Initializes an ArrayList, creates a new object and gives a reference
+        var scanner = new Scanner(System.in);
+        // These 2 lines in a function
+        while (true) {
+            System.out.println("Enter the item you want to add to the list or type exit to stop: ");
+            var item = scanner.nextLine(); // Asks the user for input
+
+            if(item.equals("exit")){
+                break;
+            }
+            
+            addItem(shopsItems, item);
+        }
+
+        printArrayList(shopsItems);
+        
+        System.out.println("Enter the item you want to remove from the list:");
+        var itemToRemove = scanner.nextLine(); // Asks the user for input
+        shopsItems.removeIf(item -> item.equals(itemToRemove));
+
+        printArrayList(shopsItems);
+
+        var filteredArrayList = new ArrayList<String>();
+        for (String item: shopsItems){
+            if(item.length() <= 5){
+                filteredArrayList.add(item);
+            }
+        }
+        printArrayList(filteredArrayList);
+    }
+
+    public static void printArrayList(ArrayList<String> items) {
+        System.out.println("Store has these items:");
+        for (String item : items) {
+            System.out.println(item);
+        }
+    }
+
+    public static void addItem(ArrayList<String> shopsItems, String item) {
+        shopsItems.add(item); // adds the item to the shopsItems arrayList
+        System.out.println(item + " has been added to the store"); // Provide information to the user
+    }
+}
+
+// Initialize ArrayList
+// Create an element in the arrayList
+// Remove an element
+// Get the elements
+```
+
+
+```java
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var shopsItems = new ArrayList<String>();
+        shopsItems.add("Glass table");        
+        shopsItems.add("Wooden table");
+        shopsItems.add("Round table");
+        shopsItems.add("Doors");
+        shopsItems.add("Trapdoor");
+        shopsItems.add("Couch");
+        shopsItems.add("Bed");
+        shopsItems.add("Sofa");
+
+        var filteredShopsItems = shopsItems
+            .stream()
+            .filter(item -> item.contains("table"))
+            .collect(Collectors.toList());
+        
+        System.out.println(filteredShopsItems);
+    }
+}
+
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var shopsItems = new ArrayList<String>();
+        shopsItems.add("Glass table");
+        shopsItems.add("Wooden table");
+        shopsItems.add("Round table");
+        shopsItems.add("Doors");
+        shopsItems.add("Trapdoor");
+        shopsItems.add("Couch");
+        shopsItems.add("Bed");
+        shopsItems.add("Sofa");
+
+        var filteredShopsItems = shopsItems
+                .stream()
+                .skip(3)
+                .limit(2)
+                .collect(Collectors.toList());
+
+        System.out.println(filteredShopsItems);
+    }
+}
+
+```
+
+
+```java
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var shopsItems = new ArrayList<String>();
+        shopsItems.add("Glass table");
+        shopsItems.add("Wooden table");
+        shopsItems.add("Round table");
+        shopsItems.add("Doors");
+        shopsItems.add("Trapdoor");
+        shopsItems.add("Couch");
+        shopsItems.add("Bed");
+        shopsItems.add("Sofa");
+
+        shopsItems
+            .stream()
+            .skip(3)
+            .limit(2)
+            .forEach(x -> System.out.println("TEST " + x));
+
+    }
+}
+
+
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var shopsItems = new ArrayList<String>();
+        shopsItems.add("Glass table");
+        shopsItems.add("Wooden table");
+        shopsItems.add("Round table");
+        shopsItems.add("Doors");
+        shopsItems.add("Trapdoor");
+        shopsItems.add("Couch");
+        shopsItems.add("Bed");
+        shopsItems.add("Sofa");
+
+        shopsItems
+            .stream()
+            .filter(x -> x.contains("table"))
+            .forEach(x -> System.out.println("TEST " + x));
+
+    }
+}
+
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var shopsItems = new ArrayList<String>();
+        shopsItems.add("Glass table");
+        shopsItems.add("Wooden table");
+        shopsItems.add("Round table");
+        shopsItems.add("Doors");
+        shopsItems.add("Trapdoor");
+        shopsItems.add("Couch");
+        shopsItems.add("Bed");
+        shopsItems.add("Sofa");
+        
+        shopsItems
+            .stream()
+            //.filter(x -> x.contains("table"))
+            .forEach(x -> Print(x));
+
+    }
+
+    public static void Print(String text) {
+        System.out.println();
+        System.out.println(text);
+    }
+}
+```
+
+
+
