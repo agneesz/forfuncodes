@@ -934,4 +934,40 @@ public class Main {
 ```
 
 
+```java
 
+"fork"
+//Fork has 3 or 4  spikes
+//Fork has a material (silver, or plastic, wood)
+//Fork has sharpness in the spikes. 0
+//A fork can stab and whenever a fork stabs, it gets more dull
+//Sharpness is gonna decrease by 0.1
+
+public class Fork{
+  public int spikeCount;
+  public String material;
+  public double sharpness = 10;
+
+  //new Fork(3, "wood")
+  public Fork(int spikeCount, String material){
+    this.spikeCount = spikeCount;
+    this.material = material;
+  }
+
+  public void stab(){
+    sharpness = sharpness - 0.1;
+  }
+}
+
+"main"
+public class Main {
+    public static void main(String[] args) {
+        var fork = new Fork(4, "Silver");
+
+        System.out.println("Fork is made out of " + fork.material);
+
+        System.out.println("Fork has " + fork.spikeCount + " spikes in total.");
+
+        System.out.println("And the sharpness is " + fork.sharpness);
+    }
+}
