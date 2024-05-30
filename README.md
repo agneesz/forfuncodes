@@ -946,7 +946,7 @@ public class Main {
 public class Fork{
   public int spikeCount;
   public String material;
-  public double sharpness = 10;
+  public int sharpness = 1000;
 
   //new Fork(3, "wood")
   public Fork(int spikeCount, String material){
@@ -955,7 +955,7 @@ public class Fork{
   }
 
   public void stab(){
-    sharpness = sharpness - 0.1;
+    sharpness = sharpness - 1;
   }
 }
 
