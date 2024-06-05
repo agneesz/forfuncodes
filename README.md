@@ -964,10 +964,19 @@ public class Main {
     public static void main(String[] args) {
         var fork = new Fork(4, "Silver");
 
-        System.out.println("Fork is made out of " + fork.material);
+        System.out.println("The fork made out of " + fork.material + " has " +  fork.spikeCount + " spikes in total. And the sharpness is " + fork.sharpness);
 
-        System.out.println("Fork has " + fork.spikeCount + " spikes in total.");
+        System.out.println("The fork is made out of " + fork.material);
+
+        System.out.println("The fork has " + fork.spikeCount + " spikes in total.");
 
         System.out.println("And the sharpness is " + fork.sharpness);
+
+        // we will create a stabbing machine. 
+
+        for(int i = 0; i < 100; i++){
+            fork.stab();
+        }
+        System.out.println("The sharpness after 100 stabs is " + fork.sharpness);
     }
 }
