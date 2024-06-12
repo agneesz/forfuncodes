@@ -980,3 +980,113 @@ public class Main {
         System.out.println("The sharpness after 100 stabs is " + fork.sharpness);
     }
 }
+
+
+
+
+
+Develop a simple book management application with ArrayList.
+User should be able to add a book to ArrayList.
+User should be able to remove a book from ArrayList.
+
+Easy: Work with String in ArrayList. All the actions should be available for user.
+
+Medium: Work with String User should be able to repeat all the actions infinitely.
+
+Hard: Create a Book class and work with Book object to the ArrayList.
+
+
+```java
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+    // shopsItems here
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+
+        ArrayList<Book> booksItems = new ArrayList<>();
+
+            while (true) {
+                System.out.println("Enter the book you want to add to the list or type 'exit' to stop, or type 'remove' if you want to remove book from a list: ");
+                var item = scanner.nextLine(); // Asks the user for input
+
+                if (item.equalsIgnoreCase("exit")) {
+                    break;
+                } else if (item.equalsIgnoreCase("remove")) {
+                    removeItem(booksItems, scanner);
+                } else {
+                    System.out.println("Enter the author:");
+                    var author = scanner.nextLine();
+                    System.out.println("Enter the ISBN:");
+                    var isbn = scanner.nextLine();
+                    Book newBook = new Book(item, author, isbn);
+                    booksItems.add(newBook);
+                    System.out.println("Book added successfully.");
+                }
+            }
+
+            printBooks(booksItems);
+
+            System.out.println("Do you want to continue? (yes/no)");
+            var response = scanner.nextLine();
+            if (!response.equalsIgnoreCase("yes")) {
+                System.out.println("Exiting application.");
+                scanner.close();
+            }
+        }
+
+    public static void printBooks(ArrayList<Book> items) {
+        System.out.println("List of books:");
+        for (Book Book : items) {
+            System.out.println(Book);
+        }
+    }
+
+    public static void removeItem(ArrayList<Book> booksItems, Scanner scanner) {
+        System.out.println("Enter the book title you want to remove from the list:");
+        var title = scanner.nextLine(); // Asks the user for input
+        boolean removed = false;
+        for (Book Book : booksItems) {
+            if (Book.getTitle().equalsIgnoreCase(title)) {
+                booksItems.remove(Book);
+                removed = true;
+                System.out.println("Book removed successfully.");
+                break;
+            }
+        }
+        if (!removed) {
+            System.out.println("Book not found.");
+        }
+    }
+}
+
+
+
+public class Book {
+    public String title;
+    public String author;
+    public String isbn;
+
+    public Book(String title, String author, String isbn) {
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    @Override
+    public String toString() {
+        return "Title: " + title + ", Author: " + author + ", ISBN: " + isbn;
+
+    }
+}
+
+```
+
+
+
+
