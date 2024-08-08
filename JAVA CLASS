@@ -1,1 +1,71 @@
 JAVA CONTINUES
+
+
+
+
+codde from datourium application
+
+
+	@GetMapping("/ping")
+	public String ping() {
+		return "pong";
+	}
+
+	@GetMapping("/hello")
+	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
+		return String.format("Hello %s!", name); // "Hello " + name;
+	}
+
+	@GetMapping("/sum")
+	public int sum(@RequestParam(value = "number1") int number1, @RequestParam(value = "number2") int number2) {
+		return number1 + number2;
+	}
+
+
+	//	@GetMapping("/draw")
+//	public int[][] draw(){
+//		return new int[][]{
+//				new int[]{0, 0, 0},
+//				new int[]{1, 0, 0},
+//				new int[]{1, 0, 0}};
+//	}
+	@GetMapping("/multiply")
+	public int multiply(@RequestParam(value = "number1") int number1, @RequestParam(value = "number2") int number2) {
+		return number1 * number2;
+	}
+
+	@GetMapping("/getbook") //localhost:8080/getbook
+	public Book getbook() {
+		var book = new Book();
+		book.title = "book title";
+		book.author = "book author";
+
+		return book;
+	}
+
+
+	@PostMapping("/postexample")
+	public Book addBook(@RequestBody Book book){
+		book.title = book.title.toUpperCase();
+		return book;
+	}
+	// we want to user to be able to authorize, by using username and password
+	// and then we provide a profile of the user (name, surname, age, email)
+
+	@PostMapping("/authorize")
+	public User authorize(@RequestBody Credentials credentials){ // username + password
+		if(credentials.username.equals("agnese") && credentials.password.equals("123")){
+			var user = new User();
+			user.name = "Agnese";
+			return user;
+		}
+		return null;
+	}
+
+	@PostMapping("/item")
+	public ResultItem sendItem(@RequestBody Item item){ // username + password
+		String originalName = item.getName();
+		String resultName = originalName + new StringBuilder(originalName).reverse().toString();
+		return new ResultItem(resultName);
+
+	}
