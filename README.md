@@ -1090,4 +1090,24 @@ public class Book {
 ![image](https://github.com/agneesz/forfuncodes/assets/165931569/a0045d5c-9bdf-4192-abbb-5d5109390e86)
 
 
+SQL CODE
+``` java 
+SELECT 
+    Owners.City, 
+    Sales.Country,
+    Sales.PetID, 
+    SUM(Procedures.Price) AS TotalSales
+FROM 
+    Sales
+JOIN 
+    Procedures ON Sales.ProcedureCode = Procedures.ProcedureCode 
+JOIN 
+    Pets ON Pets.PetID = Sales.PetID
+JOIN
+    Owners ON Owners.OwnerID = Pets.OwnerID
+GROUP BY 
+    Owners.City, 
+    Sales.Country,
+    Sales.PetID;
 
+```
