@@ -9,6 +9,7 @@ git commit -m 'message'
 git push
 git push --set-upstream origin [branch_name]
 
+![Uploading python-arrays-versus-lists-ipcisco.png…]()
 
 Links for studying:
 
