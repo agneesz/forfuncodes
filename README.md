@@ -1,3 +1,5 @@
+github CHEAT SHEET: 
+https://education.github.com/git-cheat-sheet-education.pdf
 
 Links for studying:
 
