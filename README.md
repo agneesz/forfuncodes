@@ -1,6 +1,15 @@
 github CODE SHEET: 
 https://education.github.com/git-cheat-sheet-education.pdf
 
+git clone [branch_name] 
+git pull 
+git pull origin main
+git add --all 
+git commit -m 'message'
+git push
+git push --set-upstream origin [branch_name]
+
+
 Links for studying:
 
 https://www.programiz.com/python-programming/for-loop
