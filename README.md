@@ -9,7 +9,7 @@ https://emojipedia.org/cross-mark - emoji kodi
 https://www.freecodecamp.org/learn/ - kod'e'sanas uzdevumi
 
 
-
+ADDING INFORMATION USING VS CODE :)
 
 
 read me file uses markdown syntax to edit any text, formulas or codes
