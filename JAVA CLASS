@@ -1,5 +1,10 @@
 JAVA CONTINUES
 
+***Design Pattern Catalog***
+
+https://java-design-patterns.com/patterns/
+
+
 package com.datorium.Datorium.API;
 
 import com.datorium.Datorium.API.DTOs.Book;
