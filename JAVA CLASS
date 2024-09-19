@@ -4,6 +4,14 @@ JAVA CONTINUES
 
 https://java-design-patterns.com/patterns/
 
+1.  Repeatable/consistent -- Should be able to pass no matter of different circumstances
+2. independancy/isolated --  Shouldn't run in specific order, should run on it's own
+3. Test one thing -- Unit test is supposed to test the smallest unit of program. 
+4. Should follow programming guidelines/patterns -- Should have consistent structure of unit tests (for example. Arrange, Act, Assert
+
+Should have a good description of Unit test - for example. GivenWhenThen
+
+
 
 package com.datorium.Datorium.API;
 
